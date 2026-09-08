@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* High Density Theme Custom Classes */
+.bg-hd-dark {
+  background-color: #080809;
+}
+
+.bg-hd-card {
+  background-color: #0C0C0D;
+}
+
+.bg-hd-panel {
+  background-color: #0F0F10;
+}
+
+.bg-hd-chip {
+  background-color: #161617;
+}
+
+.border-hd-border {
+  border-color: #1A1A1B;
+}
+
+.border-hd-border-subtle {
+  border-color: #1F2937;
+}
+
+/* High Density Technical Grid */
+.tech-grid {
+  background-size: 24px 24px;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.tech-grid-dense {
+  background-size: 12px 12px;
+  background-image: 
+    radial-gradient(circle, rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar - High Density Minimalist */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080809;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1A1B;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A2A2D;
+}
+
+/* High Density Panels */
+.hd-panel {
+  background-color: #0C0C0D;
+  border: 1px solid #1A1A1B;
+}
+
+.hd-panel-elevated {
+  background-color: #0F0F10;
+  border: 1px solid #1A1A1B;
+}
+
+.hd-chip {
+  background-color: #161617;
+  border: 1px solid #1A1A1B;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

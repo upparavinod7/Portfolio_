@@ -1,30 +1,30 @@
-import React, { useState } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { AboutSection } from './components/AboutSection';
-import { ExperienceSection } from './components/ExperienceSection';
-import { FeaturedProjects } from './components/FeaturedProjects';
-import { ProjectCatalog } from './components/ProjectCatalog';
-import { SkillsSection } from './components/SkillsSection';
-import { EducationLeadership } from './components/EducationLeadership';
-import { ResumeSection } from './components/ResumeSection';
-import { ContactSection } from './components/ContactSection';
-import { Footer } from './components/Footer';
-import { ProjectModal } from './components/ProjectModal';
-import { ResumeModal } from './components/ResumeModal';
-import { Project } from './types';
+import React, { useState } from "react";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import { AboutSection } from "./components/AboutSection";
+import { ExperienceSection } from "./components/ExperienceSection";
+import { FeaturedProjects } from "./components/FeaturedProjects";
+import { ProjectCatalog } from "./components/ProjectCatalog";
+import { SkillsSection } from "./components/SkillsSection";
+import { EducationLeadership } from "./components/EducationLeadership";
+import { ResumeSection } from "./components/ResumeSection";
+import { ContactSection } from "./components/ContactSection";
+import { Footer } from "./components/Footer";
+import { ProjectModal } from "./components/ProjectModal";
+import { ResumeModal } from "./components/ResumeModal";
+import { Project } from "./types";
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   const handleOpenContact = () => {
-    const el = document.getElementById('contact');
+    const el = document.getElementById("contact");
     if (el) {
       const navOffset = 70;
       const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      const offsetPosition = elementPosition + window.scrollY - navOffset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
 
@@ -65,9 +65,7 @@ export default function App() {
         <EducationLeadership />
 
         {/* 9. Resume CTA & Download */}
-        <ResumeSection
-          onOpenResume={() => setIsResumeOpen(true)}
-        />
+        <ResumeSection onOpenResume={() => setIsResumeOpen(true)} />
 
         {/* 10. Contact */}
         <ContactSection />

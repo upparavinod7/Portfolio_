@@ -146,3 +146,36 @@ April 2025 – May 2026
   document.body.removeChild(link);
   URL.revokeObjectURL(url);
 };
+
+export const downloadResumePdf = () => {
+  const basePath = import.meta.env.BASE_URL || '/';
+  const resumeUrl = `${basePath.endsWith('/') ? basePath : basePath + '/'}Uppara_Vinod_Resume.pdf`;
+
+  fetch(resumeUrl)
+    .then((res) => {
+      if (!res.ok) throw new Error('Network error fetching resume PDF');
+      return res.blob();
+    })
+    .then((blob) => {
+      const blobUrl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = 'Uppara_Vinod_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 100);
+    })
+    .catch(() => {
+      const link = document.createElement('a');
+      link.href = resumeUrl;
+      link.download = 'Uppara_Vinod_Resume.pdf';
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+};
+
+export const downloadResume = downloadResumePdf;
+

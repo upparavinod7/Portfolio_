@@ -582,7 +582,7 @@ export const MINIMAL_SKILLS = [
   },
   {
     category: 'Operating Systems',
-    skills: ['Windows', 'macOS']
+    skills: ['Windows', 'macOS', 'Linux-Ubuntu']
   }
 ];
 
@@ -611,14 +611,7 @@ export const OTHER_PROJECTS_LIST = [
     category: 'AI / ML',
     github: 'https://github.com/upparavinod7/ML-Models'
   },
-  {
-    id: 'ai-engineer',
-    name: 'AI Engineer Curriculum',
-    description: 'Open-source repository documenting learning roadmaps, agentic workflows, and production practices for modern AI engineering.',
-    tech: ['Python', 'LLMs', 'AI Agents', 'Workflows'],
-    category: 'AI / ML',
-    github: 'https://github.com/upparavinod7/ai_engineer'
-  },
+  
   {
     id: 'movie-finder',
     name: 'Movie Finder',

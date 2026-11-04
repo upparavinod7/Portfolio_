@@ -9,10 +9,10 @@ export const PERSONAL_INFO = {
   phone: '+91 7680841759',
   github: 'https://github.com/upparavinod7',
   linkedin: 'https://www.linkedin.com/in/uppara-vinod-2259b728b/',
-  location: 'Pattikonda, Andhra Pradesh, India',
+  location: 'Kurnool, Andhra Pradesh, India',
   availability: 'Open to AI/ML & Full Stack Engineering Roles',
   stats: {
-    cgpa: '9.45 / 10',
+    cgpa: '9.41 / 10',
     degree: 'B.Tech CSE — AI & ML',
     educationPeriod: '2023 – 2027',
     institution: 'Joy University',
@@ -36,8 +36,8 @@ export const RECRUITER_SNAPSHOT = [
   },
   {
     label: 'Practical Experience',
-    value: '2 Industry Internships',
-    detail: 'Hyperready (Junior Developer Intern), Unified Mentor (Machine Learning Intern)',
+    value: '3 Industry Internships',
+    detail: 'Azentra Global (Backend Developer Intern, AI & ML Intern ), Hyperready (Junior Developer Intern), Unified Mentor (Machine Learning Intern)',
     category: 'Experience'
   },
   {
@@ -725,7 +725,7 @@ export const EDUCATION_DATA: Education = {
   degree: 'Bachelor of Technology (B.Tech)',
   field: 'Computer Science & Engineering — Artificial Intelligence & Machine Learning',
   period: '2023 – 2027',
-  cgpa: '9.45 / 10',
+  cgpa: '9.41 / 10',
   highlights: [
     'Outstanding academic record with an overall CGPA of 9.45 / 10.',
     'Specialized in Artificial Intelligence, Machine Learning algorithms, and Computer Vision architectures.',
